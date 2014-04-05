@@ -1,8 +1,10 @@
 # UnderStand.js
 ### MV* framework you could understand in a moment
 
-抽象模型：
-1.基类扩展
+### 抽象模型：
+- 1.基类扩展
+
+```javascript
     understand.extend({
         fun1:function(){
             console.log('基类扩展)
@@ -11,8 +13,11 @@
     var Module = U.class();
     var i = new Module();
     i.fun1();
-2.创建模型
-    /*
+```
+
+- 2.创建模型
+
+```javascript
     U.extend({
         fun1:function(){
             console.log('func1 from base class');
@@ -40,26 +45,28 @@
     p.fun1();
     //p.fun2();
     var c = new Child('child');
-    c.fun3();*/
- 
-3.子类继承
-4.静态属性、方法
+    c.fun3();
+```
 
-数据绑定：
-1.get
-2.set
-3.filter
-4.delete
-5.all
-6.size
-7.has
-消息分发：
-1.on
-2.emit
-3.detach
-通用工具类：
-1.each
-2.extend
-3.clone
-4.trim
-5.typeof
+- 3.子类继承
+- 4.静态属性、方法
+
+### 数据绑定：
+0. get
+0. set
+0. filter
+0. delete
+0. all
+0. size
+0. has
+### 消息分发：
+0. on
+0. emit
+0. detach
+### 通用工具类：
+0. each
+0. extend
+0. clone
+0. trim
+0. typeof
+
