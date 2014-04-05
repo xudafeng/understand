@@ -59,14 +59,16 @@
 0. all
 0. size
 0. has
+
 ### 消息分发：
 0. on
 0. emit
 0. detach
+
+
 ### 通用工具类：
 0. each
 0. extend
 0. clone
 0. trim
 0. typeof
-
