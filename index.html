@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>understand.js - understand what you want</title>
+        <meta name="description" content="MV* framework you could understand for a moment">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="shortcut icon" href="docs/page/images/logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="docs/page/style/base.css"/>
+        <link rel="stylesheet" href="docs/page/style/todo.css"/>
+        <script src="build/understand.js"></script>
+        <script src="docs/page/javascript/civet.js"></script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="app">
+                <div id="header">
+                    <input id="new-todo" placeholder="Do you understand what to do?" autofocus="">
+                </div>
+                <div id="main">
+                    <input id="toggle-all" type="checkbox">
+                    <label for="toggle-all">Mark all as complete</label>
+                    <ul id="todo-list"></ul>
+                    <script id="civet-template" type="template">
+                    <#each val in $todos#>
+                        <li class="<#if $val.completed#>completed<#/if#>" data-id="<#=$val.id#>">
+                            <div class="view">
+                                <input class="toggle" type="checkbox" <#if $val.completed#>checked="checked"<#/if#> >
+                                <label><#=$val.title#></label>
+                                <button class="destroy"></button>
+                            </div>
+                            <input class="edit" value="<#=$val.title#>">
+                        </li>
+                    <#/each#>
+                    </script>
+                </div>
+                <div id="footer">
+                    <span id="todo-count"><strong>0</strong></span>
+                    <ul id="filters">
+                        <li>
+                            <a class="selected" href="#/">All</a>
+                        </li>
+                        <li>
+                            <a href="#/doing">Doing</a>
+                        </li>
+                        <li>
+                            <a href="#/done">Done</a>
+                        </li>
+                    </ul>
+                    <button id="clear-completed">Clear (1)</button>
+                </div>
+            </div>
+            <ul id="nav">
+                <li>
+                    <a href="#doc" class="nav-link">
+                        Document
+                    </a>
+                </li>
+                <li>
+                    <a href="#feature" class="nav-link">
+                        Feature
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link">
+                        About
+                    </a>
+                </li>
+            </ul>
+            <img id="logo" src="docs/page/images/logo.png">
+            <h1>
+                understand.js
+            </h1>
+            <p class="desc">
+            Understand.js is a MV* framework </br>you could understand in a moment
+            </p>
+            <p class="buttons">
+                <a href="#" class="button">
+                    Get it v1.0.2
+                </a>
+                <a href="https://github.com/xudafeng/understand" target="_blank" class="button">
+                    Source on GitHub
+                </a>
+            </p>
+        </div>
+        <div id="feature">
+            <h2>
+                You should try it out if you like:
+            </h2>
+            <ul>
+                <li>
+                    Data bindings
+                </li>
+                <li>
+                    Class models
+                </li>
+                <li>
+                    Fix a small library
+                </li>
+                <li>
+                    NodeJs
+                </li>
+            </ul>
+        </div>
+        <div id="about">
+            <a class="start" href="#">
+                Get Started
+            </a>
+            <p>
+                Copyright 2013
+                <a href="http://xdf.me" target="_blank">
+                    xdf
+                </a>
+                <span style="display: none;"><script src="http://s4.cnzz.com/stat.php?id=1642323&web_id=1642323" language="JavaScript"></script></span>
+            </p>
+        </div>
+        <script src="docs/page/javascript/jquery.js"></script>
+	    <script src="docs/page/javascript/model.js"></script>
+	    <script src="docs/page/javascript/view.js"></script>
+        <script src="docs/page/javascript/init.js"></script>
+    </body>
+</html>

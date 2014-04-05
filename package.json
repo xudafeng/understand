@@ -1,0 +1,27 @@
+{
+  "name": "understand",
+  "version": "1.0.3",
+  "description": "MV* framework you could understand for a moment",
+  "author": "xdf",
+  "email": "xudafeng[at]126.com",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xudafeng/understand.git"
+  },
+  "keywords": [
+    "framework mv*"
+  ],
+  "bugs": {
+    "url": "https://github.com/xudafeng/understand/issues"
+  },
+  "homepage": "https://xudafeng.github.com/understand",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "license": "MIT"
+}
