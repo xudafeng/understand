@@ -1,6 +1,6 @@
 ;(function(global,U,$){
     'use strict';
-    var civet = global.civet;
+    var grace = global.grace;
     var View = U.class(function() {
         this.bindEventHandlers();
         this.loadTemplates();
@@ -60,14 +60,14 @@
             $('#main, #footer').hide();
         },
         loadTemplates : function() {
-            this.template = $('#civet-template').html();
+            this.template = $('#grace-template').html();
         },
         makeEditable : function(id) {
             var $item = $('#todo-list li[data-id=' + id + ']');
             $item.addClass('editing').find('input.edit').focus();
         },
         render: function(todos) {
-            var html = civet.compile(this.template)({'todos' : todos});
+            var html = grace.compile(this.template)({'todos' : todos});
             $('#todo-list').html(html);
         },
         setActiveRoute: function(route) {
