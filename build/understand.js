@@ -2,7 +2,7 @@
  * understand.js v1.0.3
  *
  * MV* framework you could understand for a moment
- * Latest build : 2014-04-20 18:02:10
+ * Latest build : 2014-04-20 23:44:51
  *
  * 
  * ================================================================
@@ -137,13 +137,12 @@ function __attr(id) {
     return __dataHash[id];
 }
 function __setAttr(key, value) {
-    var exists = this.has(key);
     __dataHash[this.__id][key] = value;
     this.emit('change', key);
     this.emit('change:' + key, value);
-    var specificEvent = exists ? 'update' : 'create';
-    this.emit(specificEvent, key);
-    this.emit(specificEvent + ':' + key, value);
+    var __event = this.has(key) ? 'update' : 'create';
+    this.emit(__event, key);
+    this.emit(__event + ':' + key, value);
 }
 function __removeAttr(keys) {
     var a = __trim(keys).split(" ");

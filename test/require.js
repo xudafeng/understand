@@ -1,2 +1,2 @@
-var understand = require('../bin/understand');
+var understand = require('../index').understand;
 console.log(understand.version)
