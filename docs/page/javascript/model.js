@@ -15,7 +15,7 @@
             });
         },
         clearCompleted: function() {
-            this.remove(function(item) {
+            this.delete(function(item) {
                 return item.completed === true;
             });
         },
@@ -47,7 +47,7 @@
     });
     var Store = U.class(function() {
         if (!'localStorage' in global) {
-            alert("Saving is not supported in your browser :(");
+            alert("Saving is not supcompletedallported in your browser :(");
         }
     });
     Store.augment({
@@ -56,6 +56,7 @@
             return result ? JSON.parse(result) : {};
         },
         save: function(data) {
+            // console.log(data)
             global.localStorage['understand-what-todo'] = JSON.stringify(data);
         }
     });

@@ -2,7 +2,7 @@
  * understand.js v1.0.3
  *
  * MV* framework you could understand for a moment
- * Latest build : 2014-04-03 20:25:02
+ * Latest build : 2014-04-20 17:18:37
  *
  * 
  * ================================================================
@@ -153,11 +153,12 @@ function __removeAttr(keys) {
             delete __attr(this.__id)[key];
             this.emit('change', key);
             this.emit('change:' + key);
-            this.emit('remove', key);
-            this.emit('remove:' + key);
+            this.emit('delete', key);
+            this.emit('delete:' + key);
         }
     }
 }
+
 function __Base() {
 };
 __Base.prototype = {
@@ -175,9 +176,16 @@ __Base.prototype = {
         return this;
     },
     delete : function(i) {
+        if (__typeOf(i) === 'function') {
+            var __dm =  __dataHash[this.__id];
+            for (var key in __dm) {
+               __removeAttr.call(this, __dm[key]['id']);
+            }
+            return this;
+        }
         if (__typeOf(i) === 'undefined') {
             __dataHash[this.__id] = {};
-            this.emit('change remove');
+            this.emit('change delete');
         } else {
             __removeAttr.call(this, i);
         }
@@ -208,12 +216,13 @@ __Base.prototype = {
         return r;
     },
     update : function(k, fn) {
-        var v = this.get(k);
-        var type = __typeOf(v);
-        if (type === 'object' || type === 'array') {
-            v = __clone(v);
+        if (!fn) {
+            for (var key in __dataHash[this.__id]) {
+               __setAttr.call(this, key, k.call(this, __dataHash[this.__id][key]) );
+            }
+        } else {
+            __setAttr.call(this, k, fn.call(this, this.get(k), k));
         }
-        __setAttr.call(this, k, fn.call(this, v, k));
         return this;
     }
 };

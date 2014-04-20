@@ -71,6 +71,7 @@
             $('#todo-list').html(html);
         },
         setActiveRoute: function(route) {
+            
             $('#filters a').removeClass('selected').filter('[href="#/' + route + '"]').addClass('selected');
         },
         show: function() {
