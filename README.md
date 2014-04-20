@@ -52,13 +52,56 @@
 - 4.静态属性、方法
 
 ### 数据绑定：
+
+```javascript
+   var Module = U.class();
+```
 0. get
+
+```javascript
+   Module.get(key);
+```
 0. set
+
+```javascript
+   Module.get(key, value);
+```
 0. filter
+
+```javascript
+   Module.filter(fn);
+```
+
 0. delete
+
+```javascript
+   Module.delete([key | fn]);
+```
+
 0. all
+
+```javascript
+   Module.all(); // return attributes
+```
+
 0. size
+
+```javascript
+   Module.size(); // return attributes size
+```
+
 0. has
+
+```javascript
+   Module.has(key);//return boolean
+```
+
+
+0. update
+
+```javascript
+   Module.update([key,]fn);
+```
 
 ### 消息分发：
 0. on

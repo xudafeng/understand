@@ -56,7 +56,6 @@
             return result ? JSON.parse(result) : {};
         },
         save: function(data) {
-            // console.log(data)
             global.localStorage['understand-what-todo'] = JSON.stringify(data);
         }
     });
