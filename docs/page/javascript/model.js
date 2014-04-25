@@ -4,7 +4,7 @@
         var _time = +new Date;
         return 'understand-'+ _time;
     }
-    var Model = U.class(function(todos) {
+    var Model = U.create(function(todos) {
         this.set(todos);
     });
     Model.augment({
@@ -15,7 +15,7 @@
             });
         },
         clearCompleted: function() {
-            this.delete(function(item) {
+            this.remove(function(item) {
                 return item.completed === true;
             });
         },
@@ -45,7 +45,7 @@
             });
         }
     });
-    var Store = U.class(function() {
+    var Store = U.create(function() {
         if (!'localStorage' in global) {
             alert("Saving is not supcompletedallported in your browser :(");
         }

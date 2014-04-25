@@ -1,7 +1,7 @@
 ;(function(global,U,$){
     'use strict';
     var grace = global.grace;
-    var View = U.class(function() {
+    var View = U.create(function() {
         this.bindEventHandlers();
         this.loadTemplates();
     });

@@ -2,7 +2,7 @@
  * understand.js v1.0.3
  *
  * MV* framework you could understand for a moment
- * Latest build : 2014-04-20 23:44:51
+ * Latest build : 2014-04-25 11:54:36
  *
  * 
  * ================================================================
@@ -61,7 +61,7 @@ function __factory(f){
     constructor.prototype = __create(superclass);
     constructor.prototype.constructor = constructor;
     __extend(constructor, {
-        class : function(f) {
+        create : function(f) {
             f = f || function(){};
             f.superclass = this;
             return __factory(f);
@@ -174,7 +174,7 @@ __Base.prototype = {
         }
         return this;
     },
-    delete : function(i) {
+    remove : function(i) {
         if (__typeOf(i) === 'function') {
             var __dm =  __dataHash[this.__id];
             for (var key in __dm) {
@@ -282,7 +282,7 @@ exports._ = {
     exports.extend = function(){
         return __extendThis.apply(__Base.prototype, arguments);
     }
-    exports.class = function(c) {
+    exports.create = function(c) {
         return __factory(c);
     }
     exports.version = "1.0.3";

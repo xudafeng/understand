@@ -1,7 +1,7 @@
 ;(function(global,U){
     'use strict';
     var _ = U._;
-    var Controller = U.class(function() {
+    var Controller = U.create(function() {
         this.view = new global.View();
         this.store = new global.Store();
         this.model = new global.Model(this.store.load());
@@ -39,7 +39,7 @@
                     this.view.clearInput();
                 },
                 'tododelete': function(id) {
-                    this.model.delete(id);
+                    this.model.remove(id);
                 },
                 'todocompleted todouncompleted': function(id, e) {
                     this.model.update(id, function(item) {
@@ -49,7 +49,7 @@
                 },
                 'todoedit': function(data) {
                     if (data.title === "") {
-                        this.model.delete(data.id);
+                        this.model.remove(data.id);
                     } else {
                         this.model.update(data.id, function(item) {
                             item.title = data.title;
@@ -83,7 +83,7 @@
             console.log('func1 from base class');
         }
     })
-    var Parent = U.class(function(name){
+    var Parent = U.create(function(name){
         console.log(name + ' born');
     });
     Parent.augment({
