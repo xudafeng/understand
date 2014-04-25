@@ -10,7 +10,7 @@
             console.log('基类扩展)
         }
     });
-    var Module = U.class();
+    var Module = U.create();
     var i = new Module();
     i.fun1();
 ```
@@ -20,10 +20,10 @@
 ```javascript
     U.extend({
         fun1:function(){
-            console.log('func1 from base class');
+            console.log('func1 from base create');
         }
     })
-    var Parent = U.class(function(name){
+    var Parent = U.create(function(name){
         console.log(name + ' born');
     });
     Parent.augment({
@@ -31,7 +31,7 @@
             console.log('fun2 from method prototype');
         }
     });
-    var Child = Parent.class(function(name){
+    var Child = Parent.create(function(name){
         console.log(name + ' born');
         this.fun2();
     });
@@ -54,7 +54,7 @@
 ### 数据绑定：
 
 ```javascript
-   var Module = U.class();
+   var Module = U.create();
 ```
 0. get
 
@@ -72,10 +72,10 @@
    Module.filter(fn);
 ```
 
-0. delete
+0. remove
 
 ```javascript
-   Module.delete([key | fn]);
+   Module.remove([key | fn]);
 ```
 
 0. all
