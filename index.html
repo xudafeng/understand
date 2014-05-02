@@ -15,11 +15,10 @@
         <div id="content">
             <div id="app">
                 <div id="header">
-                    <input id="new-todo" placeholder="Do you understand what to do?" autofocus="">
+                    <input id="new-todo" placeholder="Do you understand what to do?" autofocus>
                 </div>
                 <div id="main">
                     <input id="toggle-all" type="checkbox">
-                    <label for="toggle-all">Mark all as complete</label>
                     <ul id="todo-list"></ul>
                     <script id="grace-template" type="template">
                     <#each val in $todos#>
@@ -47,22 +46,22 @@
                             <a href="#/done">Done</a>
                         </li>
                     </ul>
-                    <button id="clear-completed">Clear (1)</button>
+                    <div id="clear-completed">Clear (1)</div>
                 </div>
             </div>
             <ul id="nav">
                 <li>
-                    <a href="#doc" class="nav-link">
+                    <a href="#doc" class="nav">
                         Document
                     </a>
                 </li>
                 <li>
-                    <a href="#feature" class="nav-link">
+                    <a href="#feature" class="nav">
                         Feature
                     </a>
                 </li>
                 <li>
-                    <a href="#about" class="nav-link">
+                    <a href="#about" class="nav">
                         About
                     </a>
                 </li>
@@ -72,7 +71,7 @@
                 understand.js
             </h1>
             <p class="desc">
-            Understand.js is a MV* framework </br>you could understand in a moment
+                Understand.js is a MV* framework </br>you could understand in a moment
             </p>
             <p class="buttons">
                 <a href="#" class="button">
@@ -98,7 +97,7 @@
                     Fix a small library
                 </li>
                 <li>
-                    NodeJs
+                    Support NodeJs
                 </li>
             </ul>
         </div>
