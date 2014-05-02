@@ -2,7 +2,7 @@
  * understand.js v1.0.3
  *
  * MV* framework you could understand for a moment
- * Latest build : 2014-05-03 0:04:57
+ * Latest build : 2014-05-03 0:39:40
  *
  * 
  * ================================================================
