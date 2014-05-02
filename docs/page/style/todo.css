@@ -118,6 +118,7 @@ h1,h2,h3,h4,strong {
     color: #fff;
     padding: 4em 0;
     background-color: #474C4D;
+    cursor:default;
 }
 #about .avatar {
     width: 100px;
