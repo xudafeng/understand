@@ -47,7 +47,7 @@
     });
     var Store = U.create(function() {
         if (!'localStorage' in global) {
-            alert("Saving is not supcompletedallported in your browser :(");
+            U.util.log('not support localStorage');
         }
     });
     Store.augment({

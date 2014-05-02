@@ -2,12 +2,12 @@
     'use strict';
     var grace = global.grace;
     var View = U.create(function() {
-        this.bindEventHandlers();
+        this.bind();
         this.loadTemplates();
     });
     View.augment({
         ENTER_KEY_KEYCODE : 13,
-        bindEventHandlers: function() {
+        bind: function() {
             var that = this;
             $('#new-todo').on('keyup', function(e) {
                 var todoVal = $.trim($(e.target).val());
@@ -72,7 +72,6 @@
             $('#todo-list').html(html);
         },
         setActiveRoute: function(route) {
-            
             $('#filters a').removeClass('selected').filter('[href="#/' + route + '"]').addClass('selected');
         },
         show: function() {

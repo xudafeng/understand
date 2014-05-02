@@ -77,38 +77,4 @@
         }
     });
     new Controller();
-    /*
-    U.extend({
-        fun1:function(){
-            console.log('func1 from base class');
-        }
-    })
-    var Parent = U.create(function(name){
-        console.log(name + ' born');
-    });
-    Parent.augment({
-        fun2:function(){
-            console.log('fun2 from method prototype');
-        }
-    });
-    var Child = Parent.class(function(name){
-        console.log(name + ' born');
-        this.fun2();
-    });
-    Child.augment({
-        fun3:function(){
-            this.fun1();
-            this.fun2();
-        }
-    });
-    var sChild = Child.class();
-    var p = new Parent('parent');
-    p.fun1();
-    //p.fun2();
-    var c = new Child('child');
-    c.fun3();
-    var d = new sChild();
-    console.log('---')
-    d.fun3();
-    */
 })(this,understand);
