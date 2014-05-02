@@ -2,7 +2,7 @@
  * understand.js v1.0.3
  *
  * MV* framework you could understand for a moment
- * Latest build : 2014-04-25 11:54:36
+ * Latest build : 2014-05-03 0:04:57
  *
  * 
  * ================================================================
@@ -131,6 +131,8 @@ var __notify = {
         __detach.apply(this, arguments);
     }
 };
+
+__notify.fire = __notify.emit;
 
 var __dataHash = {};
 function __attr(id) {
