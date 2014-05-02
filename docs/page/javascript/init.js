@@ -19,9 +19,6 @@
             this.model.on({
                 'change' : function() {
                     this.renderView();
-                },
-                'change ready': function() {
-                    this.view.showClearCompleted( this.model.getComplete().length );
                 }
             }, this);
             this.view.on({
@@ -74,6 +71,7 @@
             } else {
                 this.view.hide();
             }
+            this.view.showClearCompleted( this.model.getComplete().length );
         }
     });
     new Controller();
