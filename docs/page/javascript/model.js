@@ -21,17 +21,21 @@
         },
         getItemsByState : function(state) {
             state = state || "all";
-            if (state === 'all') {
-                var all = [];
-                this.filter(function(i,k){
-                    i['id'] = k;
-                    all.push(i);
-                });
-                return all;
-            } else if (state === 'doing') {
-                return this.getLeft();
-            } else if (state === 'done') {
-                return this.getComplete();
+            switch(state){
+                case 'all':
+                    var all = [];
+                    this.filter(function(i,k){
+                        i['id'] = k;
+                        all.push(i);
+                    });
+                    return all;
+                break;
+                case 'doing':
+                    return this.getLeft();
+                break;
+                case 'done':
+                    return this.getComplete();
+                break;
             }
         },
         getComplete: function() {
