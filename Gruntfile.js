@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         page = '<%= '+ packageName +'.page %>',
         description = '<%= '+ packageName +'.description %>',
         buildPath = 'build',
-        libPath = 'lib',
+        srcPath = 'src',
         binPath = 'bin',
         cfgFile = packageName + '.json',
         jsSuffix = '.js',
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     function fileQuery(){
         var a = [];
         'intro static base notify data util outro'.split(' ').forEach(function(i){
-            a.push(libPath + '/' + i + jsSuffix);
+            a.push(srcPath + '/' + i + jsSuffix);
         })
         return a;
     }
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
         banner: banner,
         replace: {
             version: {
-                src: [libPath + '/' + name + jsSuffix],
+                src: [srcPath + '/' + name + jsSuffix],
                 overwrite: true,
                 replacements: [{
                     from: /exports.version\s*=\s*"\S*"/g,

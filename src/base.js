@@ -25,6 +25,7 @@ function __factory(f){
         }
         this.__id = __guid();
         __dataHash[this.__id] = {};
+        this.__dataHash = __dataHash[this.__id];
         __notifyHash[this.__id] = {};
         f.apply(this, arguments);
     }
