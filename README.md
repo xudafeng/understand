@@ -9,7 +9,7 @@
 ```javascript
 understand.extend({
   fun1:function(){
-    console.log('基类扩展)
+    console.log('基类扩展');
   }
 });
 var Module = U.create();
